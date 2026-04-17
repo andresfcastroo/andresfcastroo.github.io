@@ -75,6 +75,14 @@
   .nav-links{display:flex;gap:2rem;list-style:none}
   .nav-links a{color:var(--light-gray);text-decoration:none;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;transition:color .3s}
   .nav-links a:hover{color:var(--accent)}
+  .cv-dropdown{position:relative}
+  .cv-btn{background:var(--accent);color:var(--black);border:none;padding:.55rem 1.2rem;font-family:'DM Sans',sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-weight:500;transition:all .3s}
+  .cv-btn:hover{background:var(--accent-dark)}
+  .cv-menu{position:absolute;top:calc(100% + 8px);right:0;background:#1a1a1a;border:1px solid rgba(200,169,110,.2);min-width:160px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .25s;z-index:200}
+  .cv-dropdown:hover .cv-menu{opacity:1;visibility:visible;transform:translateY(0)}
+  .cv-menu a{display:block;padding:.75rem 1.2rem;color:var(--light-gray);text-decoration:none;font-size:.78rem;letter-spacing:.05em;transition:all .2s;border-bottom:1px solid rgba(200,169,110,.08)}
+  .cv-menu a:last-child{border-bottom:none}
+  .cv-menu a:hover{background:rgba(200,169,110,.08);color:var(--accent)}
   .hero{min-height:100vh;display:flex;align-items:center;justify-content:space-between;padding:8rem 4rem 4rem;position:relative;overflow:hidden;gap:4rem}
   .hero::before{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(200,169,110,.07) 0%,transparent 70%);pointer-events:none}
   .hero-content{display:flex;flex-direction:column;flex:1}
@@ -173,7 +181,14 @@
     <li><a href="#formacion">Formación</a></li>
     <li><a href="#performance">Performance</a></li>
     <li><a href="#contacto">Contacto</a></li>
-  </ul>
+</ul>
+  <div class="cv-dropdown">
+    <button class="cv-btn">↓ Descargar HV</button>
+    <div class="cv-menu">
+      <a href="HV_AndreCastro_Universal_ES.pdf" download>🇨🇴 Español</a>
+      <a href="HV_AndreCastro_Universal_EN.pdf" download>🇺🇸 English</a>
+    </div>
+  </div>
 </nav>
 
 <main><section class="hero" aria-label="Presentación">
